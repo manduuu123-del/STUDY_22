@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- figure는 이미지+캡션 사용할 때 사용
+     근데 이미지 말고 다른 콘텐츠도 가능-->
+    <figure>
+      <img
+        src="https://img.freepik.com/premium-vector/cute-quokka-illustration_186686-143.jpg?w=2000"
+        alt="완전 귀여운 쿼카"
+        style="width: 100px"
+      />
+      <figcaption>너무 귀여운 쿼카다 키키</figcaption>
+    </figure>
+    <!-- 예시 1. 코드 블록 -->
+    <figure>
+      <pre><code>
+    greeting="hello, world!"
+  </code></pre>
+      <figcaption>python string 변수 선언 예시</figcaption>
+    </figure>
+    <!-- 예시 2.  인용문 -->
+    <!-- blockquote 태그는 텍스트가 인용문임을 나타날 때 사용 -->
+    <figure>
+      <blockquote>
+        <p>성악설 : 인간은 태어날 때부터 악하다.</p>
+      </blockquote>
+      <figcaption>-순자</figcaption>
+    </figure>
+    <!-- 예시 3.  여러 이미지 사용 -->
+    <figure>
+      <img src="#" alt="개선 전 코드" />
+      <img src="#" alt="개선 후 코드" />
+      <figcaption>코드 개선 전(좌)과 후(우) 비교</figcaption>
+    </figure>
+    <!-- Q) figure와 img는 각각 언제 사용?
+     A) figure처럼 화면이든 스크린리더든 이 이미지에 대해서 엄청 자세하게 정리해보고 싶을 때
+     img는 걍 이미지 보여주고 싶을 때 근데 설명은 굳이? 싶을 때 -->
+
+    <!-- audio tag-->
+    <!-- 
+      [속성 정리]
+      controls: 브라우저에 기본 컨트롤바를 렌더링 해줌
+      autoplay: 페이지 로드 시에 자동 재생
+      loop: 오디오 반복 재생
+      muted: 일단 음소거 상태로 시작을 하는 애
+   
+   [오디오 포맷]
+   *mp3
+   *ogg, wav, aac, webm   -->
+    <audio src="./audio.mp3" controls></audio>
+    <!-- video tag -->
+    <!-- 
+      [속성 정리]
+      controls: 브라우저에 기본 컨트롤바를 렌더링 해줌
+      autoplay: 페이지 로드 시에 자동 재생
+      loop: 오디오 반복 재생
+      muted: 일단 음소거 상태로 시작을 하는 애
+      poster: 썸네일 이미지 설정
+    
+      [비디오 포맷]
+    *mp4
+    *video, ogg-->
+    <video
+      src="./video.mp4"
+      style="width: 500px"
+      controls
+      poster="./쿼카.avif"
+    ></video>
+    <!-- iframe tag -->
+    <!-- 외부 페이지에 있는 애들을 가지고 오는 애들
+     title은 img alt 같은 거니까, 무조건적으로 넣어야 함 -->
+    <!-- 
+      allow 값
+      autoplay: 자동 재생
+      fullscreen: 전체화면
+      camera: 카메라 접근
+      microphone: 마이크 접근
+      geolocation: 위치 정보 접근
+      payment: 결제 API
+    -->
+    <iframe
+      width="560"
+      height="315"
+      src="https://www.youtube.com/embed/U3uOCJl3RHQ?si=u5sFb7uXHm0DTMGw"
+      title="YouTube video player"
+      allow="
+        accelerometer;
+        autoplay;
+        clipboard-write;
+        encrypted-media;
+        gyroscope;
+        picture-in-picture;
+        web-share;
+      "
+    ></iframe>
+  </body>
+</html>

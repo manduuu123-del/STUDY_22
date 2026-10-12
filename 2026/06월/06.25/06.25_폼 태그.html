@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <form action="">
+      <!-- 사용자가 입력하는 애를 묶어놓는 애임 -->
+      <label for="">아이디</label>
+      <input type="text" id="id" placeholder="아이디 적어" />
+
+      <lavel for>아이디</lavel>
+      <!-- 입력 요소의 주제, 이름, 레이블
+      레이블이 폼 안에 없어도 되긴함 
+      레이블과 인풋을 함께 씀-->
+      <input type="text" placeholder="야 아이디 적어" />
+      <button>버튼임 / 아이디 적었니? ㅋㅋ</button>
+    </form>
+
+    <label for="text"> 마음에 안드는게 뭐라고?</label>
+    <textarea name="" id="text">
+        <!-- 여러 줄의 텍스트를 입력 받는 요소
+         ex) 구글에 마음에 안 드는 거 얘기하삼(최대 500자) 
+         label 태그의 for 속성값과 textrea 태그의 id 속성값이 일치하면 둘이 연결이 된다-->
+
+    </textarea>
+
+    <label for="country"></label>
+    <select name="" id="country">
+      <!-- 드롭다운 목록 -->
+      <option value="">t선택</option>
+      <option value="">대한민국</option>
+      <option value="">미국</option>
+    </select>
+
+    <select name="" id="">
+      <optgroup label="아시아">
+        <option value="">한국</option>
+        <option value="">일본</option>
+        <option value="">중국</option>
+      </optgroup>
+      <optgroup label="유럽">
+        <option value="">독일</option>
+      </optgroup>
+    </select>
+
+    <form action="">
+      <label for="country"></label>
+      <input type="text" id="country" list="country" />
+      <details id="details">
+        <option value="한국"></option>
+        <option value="미국"></option>
+        <option value="중국"></option>
+      </details>
+      <button></button>
+    </form>
+  </body>
+</html>

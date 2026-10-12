@@ -1,0 +1,156 @@
+```html
+<!doctype html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- 
+      [전역 속성(Global Attributes)]
+      * id : 식별자 (문서 내에 유일해야 하고)
+      * class : 식별자 (여러 요소에 공통적으로 붙일 수 있다)
+      * lang : 언어 선언
+      * title : 마우스 호버 시에 툴팁으로 표시되는 내용
+      * hidden : 요소를 화면에 숨길 때 (DOM에만 존재를 함)
+      * tabindex : 키보드 탭 순서를 제어하는데요
+      * data-* : 개발자가 정의하는 커스텀 데이터 속성
+      * style : 인라인 CSS
+
+      [스크린 리더 관련 속성]
+      * aria-current : 현재 어디에 있는가
+      * aria-hidden : 스크린 리더에만 숨기는 거임
+    -->
+    <header id="header" class="text" title="하이 ㅋ">
+      <p tabindex="0" style="color: aqua">hi</p>
+      <p id="p" class="text" tabindex="1">header inside</p>
+    </header>
+
+    <!-- radio: 단독 선택 -->
+    <form action="">
+      <fieldset>
+        <legend>성별</legend>
+
+        <label> <input type="radio" name="gender" value="male" /> 남성 </label>
+        <label>
+          <input type="radio" name="gender" value="female" /> 여성
+        </label>
+        <label> <input type="radio" name="gender" value="other" /> 기타 </label>
+      </fieldset>
+    </form>
+
+    <!-- checkbox: 복수 선택 -->
+    <form action="">
+      <fieldset>
+        <legend>성별</legend>
+
+        <label> <input type="checkbox" /> 여성 </label>
+        <label> <input type="checkbox" /> 남성 </label>
+        <label> <input type="checkbox" /> 기타 </label>
+      </fieldset>
+    </form>
+
+    <!-- 하이퍼링크 -->
+    <!-- 
+      [속성]
+      * href : 이동할 url, #id, mailto:, tel: 가능해요
+      * target : _self (현재 탭, 기본), _blank (새 탭)
+      * rel : 링크 관계. noopener noreferrer (새 탭 보안)
+      * download : 클릭 시 다운로드
+      * hreflang : 링크 대상 문서의 언어
+    -->
+    <a
+      href="https://ko.dict.naver.com/"
+      target="_blank"
+      rel="noopener noreferrer"
+      >NAVER</a
+    >
+    <a href="./14_image.jpg" download="이미지.jpg">다운로드</a>
+
+    <!-- 이미지 -->
+    <!-- 
+      [속성]
+      * src : 이미지 파일 경로 또는 URL
+      * alt : 이미지의 구체적인 설명
+      * width/height : 이미지 크기를 조절. 사용하지 않아야 돼요.
+      * loading : lazy (지연), eager (즉시 로드, 기본)
+    -->
+    <img src="./14_image.jpg" alt="귀여운 우리 로또씨" loading="lazy" />
+
+    <header>
+      <!-- 소개 및 탐색 -->
+      <nav>
+        <!-- 주요 탐색 링크 -->
+        <ul>
+          <li>
+            <a href="#" aria>ㅇ</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- 
+      [Form 속성]
+      action : 데이터를 보낼 서버 URL
+      method : 전송 방식
+      enctype : 인코딩 방식
+    -->
+    <form action="#" method="get">
+      <!-- 
+        [input 속성]
+        type : 입력 타입을 지정 (text, password, email, tel, checkbox, radio, search)
+        name : 필수 요소인데, 서버 전달 키 이름
+        id : label 연결
+        placeholder : 힌트 텍스트
+        disabled : 비활성화
+      -->
+      <input type="text" placeholder="아이디를 입력하여 주세요." disabled />
+
+      <!-- 
+        [textarea 속성]
+        name : 필수 요소인데, 서버 전달 키 이름
+        maxlength : 최대 입력 글자 수
+        placeholder : 힌트 텍스트
+      -->
+      <textarea
+        name=""
+        id=""
+        placeholder="너의 계좌를 나에게 줘. 5억만 가져갈게."
+      ></textarea>
+
+      <!-- 
+        [select 속성]
+        name : 필수 요소인데, 서버 전달 키 이름
+        id : label 연결
+        multiple : 다중선택
+        disabled : 비활성화
+
+        [option 속성]
+        value : 이 값이 어떤 값인지
+        disabled : 비활성화
+
+        [optgroup 속성]
+        label : 그룹 제목
+      -->
+      <select id="country2" name="countryGroup">
+        <optgroup label="아시아">
+          <option value="kr">한국</option>
+          <option value="jp">일본</option>
+        </optgroup>
+        <optgroup label="유럽">
+          <option value="de">독일</option>
+        </optgroup>
+      </select>
+
+      <!--  
+        [button type 속성값]
+        submit : 기본값. 폼 제출할 때 사용
+        button : 폼과 무관한 일반 동작할 때
+        reset : 폼 초기화 (사용 안 함)
+      -->
+      <button type=""></button>
+    </form>
+  </body>
+</html>
+```
